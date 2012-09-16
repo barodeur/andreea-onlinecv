@@ -1,15 +1,12 @@
-/ Ha, computer can't read this. For comments and guides that only the programmer can see
-<!doctype html>
+!!!
 %html
   %head
     %title
       Andreea Awesome
-    / meta has attributes
-    / /> is a shortcut to close a tag
-    %meta{:content => "my first website", :name => "description"}/
-    %meta{:charset => "utf-8"}/
-    %link{:href => "css/normalize.css", :rel => "stylesheet"}/
-    %link{:href => "/styles.css", :rel => "stylesheet"}/
+    %meta{:content => "my first website", :name => "description"}
+    %meta{:charset => "utf-8"}
+    %link{:href => "css/normalize.css", :rel => "stylesheet"}
+    %link{:href => "/styles.css", :rel => "stylesheet"}
     %script{:src => "js/jquery.js"}
     %script{:src => "js/scripts.js"}
   %body
@@ -17,14 +14,12 @@
       %header#site-header
         %h1 Andreea Magdalina
         %h2 community manager, general life enthusiast, yogurt & honey addict
-        / src stands for source
-        %img{:alt => "moi", :src => "images/moi.jpg"}/
+        %img{:alt => "moi", :src => "images/moi.jpg"}
       %section#about
         %header
           %h1 About Andreea
         .content
           %p#p1
-            / to open link in new tab you use target="_blank"
             By day
             = succeed "." do
               %a{:href => "https://www.enternships.com", :target => "_blank"} I help students and grads get the job of their life in a wonderful startup
@@ -34,17 +29,13 @@
       %section
         %header
           %h1 My tiny portfolio
-        / ul means unordered list
         %ul
           %li number one
           %li number two
-        / ol means ordered list
         %ol
           %li number one
           %li number two
-        / nav is for more specific lists. it can contain ul and ol
         %nav
-          / href means hyperlink reference
           %a{:href => "https://twitter.com/trrpaipai", :target => "_blank"}
             Twitter
           %a{:href => "https://www.facebook.com/trrpaipai", :target => "_blank"}
