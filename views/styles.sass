@@ -1,55 +1,25 @@
-/* 
- *p means selecting all paragraphs in the page
- *
- *Tag selector: choose all <p>; 
- *
- *#changes the style in a specific id
-
-/* Typography
-
-a
-  color: #FF00DD
-  &:hover
-    color: #444444
-
-section h1
-  cursor: pointer
-
-#site-header
-  text-align: center
-  h1
-    color: #C92034
-    font-size: 39px
-    font-weight: bolder
-    margin: 0
-  h2
-    color: 2E6E82
-    font-size: 14px
-
-/* Layout
+@mixin cf
+  &:after
+    content: '.'
+    display: block
+    height: 0
+    width: 0
+    visibility: hidden
+    clear: both
 
 body
-  /* .. means 2 folders back; ... means 3 folders back
-  background: #c1d9e0 url(/images/background.jpg)
-  background-position: center
-  background-attachment: fixed
-  background-repeat: no-repeat
-  background-size: cover
+  font-family: 'proxima-nova', sans-serif
 
-#main
-  width: 600px
-  background: #eeeeee
-  /* direction of margin: top right bottom left (clockwise)
-  /* HOW TO CENTER THINGS
-  margin: 0 auto 0 auto
-  padding: 20px 40px
+aside.profile
+  width: 27%
+  float: left
+  position: relative
+  padding: 3%
+  +cf
 
-#site-header img
-  width: 400px
-  margin: 20
+  .moi
+    width: 100%
+    max-width: 300px
 
-/* . is for class, while # is for id
-
-.content
-  display: none
-  /* to hide the whole element
+article#content
+  margin-left: 33%

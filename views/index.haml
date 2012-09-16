@@ -2,44 +2,43 @@
 %html
   %head
     %title
-      Andreea Awesome
+      Andreea
     %meta{:content => "my first website", :name => "description"}
     %meta{:charset => "utf-8"}
     %link{:href => "css/normalize.css", :rel => "stylesheet"}
+    %link{:href => "/css/font.css", :rel => "stylesheet"}
     %link{:href => "/styles.css", :rel => "stylesheet"}
     %script{:src => "js/jquery.js"}
     %script{:src => "js/scripts.js"}
   %body
-    %article#main
-      %header#site-header
-        %h1 Andreea Magdalina
-        %h2 community manager, general life enthusiast, yogurt & honey addict
-        %img{:alt => "moi", :src => "images/moi.jpg"}
-      %section#about
-        %header
-          %h1 About Andreea
-        .content
-          %p#p1
-            By day
-            = succeed "." do
-              %a{:href => "https://www.enternships.com", :target => "_blank"} I help students and grads get the job of their life in a wonderful startup
-            By night I'm learning how to code.
-          %p#p2
-            Anything in between involves loads of cuba libre's, extraterrestrial dancing & missed flights.
-      %section
-        %header
-          %h1 My tiny portfolio
+    %aside.profile
+      %img.moi(src="images/moi.png")
+      %section.social-media
         %ul
-          %li number one
-          %li number two
-        %ol
-          %li number one
-          %li number two
-        %nav
-          %a{:href => "https://twitter.com/trrpaipai", :target => "_blank"}
-            Twitter
-          %a{:href => "https://www.facebook.com/trrpaipai", :target => "_blank"}
-            Facebook
-          %a{:href => "https://uk.linkedin.com/in/andreeamagdalina", :target => "_blank"}
-            LinkedIn
-          %a{:href => "https://pinterest.com/trrpaipai/", :target => "_blank"} Pinterest
+          %li
+            %a(href="http://twitter.com/trrpaipai") Twitter
+          %li
+            %a(href="http://facebook.com/") Facebook
+          %li
+            %a(href="http://therednose.tumblr.com/" target="_blank") Tumblr
+          %li
+            %a(href="http://www.mixcloud.com/andreea-magdalina/" target="_blank") Mixcloud
+    %article#content
+      %h1 Andreea Magdalina
+      %p Lorem Elsass ipsum Miss Dahlias dui suspendisse condimentum Chulia Roberstau leo flammekueche Richard Schirmeck chambon tellus consectetur und id, nüdle commodo Hans non Strasbourg sit hopla météor in, ac pellentesque vielmols, Heineken turpis réchime messti de Bischheim Huguette varius Racing. ante amet, et tchao bissame semper morbi Oberschaeffolsheim geht's aliquam eget lotto-owe turpis, non Pfourtz ! Oberschaeffolsheim amet Wurschtsalad Yo dû.
+
+      %section#working
+        %h2 Working
+        %ul
+          %li Enternships
+          %li Brainjuicer
+      %section#learning
+        %h2 Learning
+      %section#listening
+        %h2 Listening
+      %section#whatching
+        %h2 Watching
+      %section#going
+        %h2 Going
+      %section#reading
+        %h2 Reading
