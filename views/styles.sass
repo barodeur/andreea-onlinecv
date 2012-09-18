@@ -1,14 +1,19 @@
-@mixin cf
-  &:after
-    content: '.'
-    display: block
-    height: 0
-    width: 0
-    visibility: hidden
-    clear: both
+$red: #F02425
+$brown: #83806A
+$darkBlue: #02779E
+$blue: #008CCC
+$violet: #4D008D
+$pink: #F06
+$yellow: #FC0
+
+$fontColor: #4D4D4D
 
 body
   font-family: 'proxima-nova', sans-serif
+  font-color: $fontColor
+
+h1
+  text-transform: uppercase
 
 ul
   padding: 0
@@ -16,15 +21,28 @@ ul
     list-style: none
 
 aside.profile
-  width: 27%
-  float: left
-  position: relative
-  padding: 3%
-  +cf
+  position: fixed
+  width: 24%
+  height: 100%
+  padding: 20px 3%
 
   .moi
     width: 100%
-    max-width: 300px
+    max-width: 200px
+
+.social-media
+  li
+    margin: 5px
+
+    a
+      color: $fontColor
+      text-decoration: none
+
 
 article#content
-  margin-left: 33%
+  position: absolute
+  height: 100%
+  left: 30%
+  line-height: 1.5em
+  border-left: 1px solid #E3E3E3
+  padding: 0 3%
