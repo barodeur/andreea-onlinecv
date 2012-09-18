@@ -4,6 +4,12 @@ require 'sinatra'
 require 'haml'
 require 'sass'
 
+if ENV['PASSWORD']
+  use Rack::Auth::Basic do |username, password|
+    password == ENV['PASSWORD']
+  end
+end
+
 get '/' do
   haml :index
 end
