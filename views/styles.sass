@@ -8,6 +8,23 @@ $yellow: #FC0
 
 $fontColor: #4D4D4D
 
+@mixin big-screen
+  @media only screen and (min-width: 600px)
+    @content
+
+@mixin small-screen
+  @media only screen and (max-width: 600px)
+    @content
+
+@mixin clearfix
+  &:after
+    content: '.'
+    display: block
+    visibility: hidden
+    width: 0
+    height: 0
+    clear: both
+
 body
   font-family: 'proxima-nova', sans-serif
   font-color: $fontColor
@@ -21,14 +38,21 @@ ul
     list-style: none
 
 aside.profile
-  position: fixed
-  width: 24%
-  height: 100%
-  padding: 20px 3%
+  @include big-screen
+    position: fixed
+    width: 24%
+    height: 100%
+    padding: 20px 3%
+  @include small-screen
+    text-align: center
+    padding: 3%
 
   .moi
-    width: 100%
-    max-width: 200px
+    @include big-screen
+      width: 100%
+      max-width: 200px
+    @include small-screen
+      width: 50%
 
 .social-media
   li
@@ -39,10 +63,40 @@ aside.profile
       text-decoration: none
 
 
+
 article#content
-  position: absolute
-  height: 100%
-  left: 30%
+  @include big-screen
+    position: absolute
+    height: 100%
+    left: 30%
+  @include small-screen
+    padding: 3%
   line-height: 1.5em
   border-left: 1px solid #E3E3E3
-  padding: 0 3%
+
+
+h2
+  margin: 0
+  padding: 25px
+  color: black
+
+  aside
+    float: left
+    display: block
+    margin-right: 25px
+
+    img
+      width: 50px
+
+  .info
+    +clearfix
+    font-size: 20pt
+    margin-top: 10px
+
+  &:hover
+    background: #2868aa
+    // color: rgba(255, 255, 255, 0.95)
+    color: white
+
+p
+  padding: 0 25px
